@@ -41,7 +41,7 @@ export default function Main() {
   }
 
   function filterByGenre(genre){
-    if (genre === '') return setManipulatedData(movies);
+    if (genre === 'All') return setManipulatedData(movies);
     const filteredMovies = movies.filter(movie => {
       return movie.genre.indexOf(genre) !== -1;
     })
@@ -75,7 +75,7 @@ export default function Main() {
             <th></th>
             <th>
               <select onChange={(e) => filterByGenre(e.target.value)}>
-                <option value={''}></option>
+                <option value={'All'}></option>
                 {genre.length > 0 ?
                   genre.map(type => (
                     <option key={type} value={type}>{type}</option>
