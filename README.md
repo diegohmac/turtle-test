@@ -1,9 +1,10 @@
 #How to run the code
 Run the following commands on the terminal in the project's folder:
 
-1 - npm install -g serve or yarn global add serve
-2 - serve -s build
-3 - open your browser at http://localhost:5000
+1 - npm run build
+2 - npm install -g serve or yarn global add serve
+3 - serve -s build
+4 - open your browser at http://localhost:5000
 
 #Explanation of architecture
 
