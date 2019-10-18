@@ -1,18 +1,18 @@
 const INITIAL_STATE = {
   movies: [],
-  isMoviesNotFound: false
+  moviesNotFound: false,
 }
 
 export default function movies(state = INITIAL_STATE, action) {
 	switch(action.type){
 		case '@movies/GET_MOVIES_SUCCESS':
-      let retrievedMovies = null;
-      Object.keys(action.movies).map(id => {
-        retrievedMovies = action.movies[id];
-      })
-      return {movies: retrievedMovies, isMoviesNotFound: false};
+      let retrievedMovies = action.movies;
+      return {movies: retrievedMovies, moviesNotFound: false};
     case '@movies/GET_MOVIES_FAILURE':
-      return {...state, isMoviesNotFound: true};
+      return {...state, moviesNotFound: true};
+    case '@movies/INSERT_COMMENT_SUCCESS':
+      const updatedMovies = action.movies;
+      return {movies: updatedMovies}
 		default:
 			return state;
 	}  

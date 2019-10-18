@@ -16,3 +16,17 @@ export function getMoviesFailure() {
     type: '@movies/GET_MOVIES_SUCCESS',
   }
 }
+
+export function insertCommentRequest(value, id) {
+  return {
+    type: '@movies/INSERT_COMMENT_REQUEST', 
+    payload: {value, id}
+  }
+}
+
+export function insertCommentSuccess(movies) {
+  return {
+    type: '@movies/INSERT_COMMENT_SUCCESS',
+    movies 
+  }
+}
