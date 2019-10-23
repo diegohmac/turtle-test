@@ -8,7 +8,13 @@ Run the following commands on the terminal in the project's folder:
 
 #Explanation of architecture
 
-- I used React as the framework cause it gives me agility
+Main Framework: I used React because the shadow dom makes the render way faster . Also It's great to create reusable components. All that together will result in a faster delivery.
+
+State Management: I used Redux because it's very powerful in centralizing and controllign the state of the application. Then all React components could get this information in a concise way. Also I used Redux Saga to control the flow of async state updates.
+
+Style: I used styled-components because it works very well with React since it works as components too. Also it's super easy to make dynamic adaptations in some components.Besides that I used "react-icons" to have access to well designed and performatic svg icons and I used "polished" to manage different brightness of color without losing the fidelity of original color and stick with theme of the application.
+
+API Calls: I used axios because it gives a simple way to make http requests and also create patterns to the api calls.
 
 #If you had more time, what would you like to improve?
 
